@@ -1,6 +1,23 @@
 import pygame
+import random
 
 pygame.init()
+
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+pygame.display.set_caption('Тир')
+icon = pygame.image.load('img/icon.png')
+pygame.display.set_icon(icon)
+target1_img = pygame.image.load('img/1.png')
+target2_img = pygame.image.load('img/2.png')
+target3_img = pygame.image.load('img/3.png')
+target4_img = pygame.image.load('img/4.png')
+target = random.choice([target1_img, target2_img, target3_img, target4_img])
+target_width = 80
+target_height = 80
+target_x = random.randint(0, SCREEN_WIDTH - target_width)
+target_y = random.randint(0, SCREEN_HEIGHT - target_height)
 
 running = True
 
